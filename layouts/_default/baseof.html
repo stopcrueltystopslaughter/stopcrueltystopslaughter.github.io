@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .language-switcher { margin-bottom: 20px; }
+        .language-switcher a { margin-right: 10px; }
+        .active { font-weight: bold; }
+    </style>
+</head>
+<body>
+    {{ partial "language-switcher.html" . }}
+    <header>
+        <h1>{{ .Site.Title }}</h1>
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+</body>
+</html>

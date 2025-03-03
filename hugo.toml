@@ -1,0 +1,22 @@
+baseURL = "http://localhost:1313/"
+defaultContentLanguage = "cs"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    disabled = false
+    contentDir = 'content/en'
+    title = "My Multilingual Site"
+  [languages.cs]
+    languageName = "Čeština"
+    weight = 2
+    disabled = false
+    contentDir = 'content/cs'
+    title = "Moje Vícejazyčná Stránka"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

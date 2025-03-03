@@ -1,0 +1,12 @@
+{{ define "main" }}
+    <div class="content">
+        {{ .Content }}
+    </div>
+    <div class="posts">
+        {{ range where .Site.RegularPages "Type" "posts" }}
+            <div class="post">
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            </div>
+        {{ end }}
+    </div>
+{{ end }}

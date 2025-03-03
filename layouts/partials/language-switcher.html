@@ -1,0 +1,17 @@
+<div class="language-switcher">
+    {{ i18n "languageSwitcher" }}
+    {{ $currentPage := . }}
+    {{ range .Site.Languages }}
+      {{ if eq . $.Site.Language }}
+        <span class="active">{{ .LanguageName }}</span>
+      {{ else }}
+        {{ $url := "" }}
+        {{ if eq . $.Site.Home.Language }}
+          {{ $url = "/" }}
+        {{ else }}
+          {{ $url = (print "/" .Lang "/") }}
+        {{ end }}
+        <a href="{{ $url }}">{{ .LanguageName }}</a>
+      {{ end }}
+    {{ end }}
+</div>
