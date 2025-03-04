@@ -1,0 +1,45 @@
+.logo {
+    height: 60px;
+}
+
+/* For the parent container */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.vertical-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px; /* Space between the two menus */
+    margin-left: auto; /* Pushes the vertical container to the right */
+    justify-content: flex-end; /* Aligns items to the right */
+}
+
+
+.menu-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    float: right;
+    margin-left: 20px; /* Space between menu items */
+    line-height: 1.2;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    overflow-wrap: initial;
+    white-space: pre;
+    font-size: 20px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+}

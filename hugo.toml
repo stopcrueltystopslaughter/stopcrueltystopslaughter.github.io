@@ -8,14 +8,24 @@ defaultContentLanguageInSubdir = true
     weight = 1
     disabled = false
     contentDir = 'content/en'
-    title = "My Multilingual Site"
+    title = "STOP CRUELTY STOP SLAUGHTER"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "home"
+        name = "OUR DEMANDS"
+        url = "#demands"
+        weight = 10
   [languages.cs]
     languageName = "Čeština"
     weight = 2
     disabled = false
     contentDir = 'content/cs'
-    title = "Moje Vícejazyčná Stránka"
-
+    title = "STOP CRUELTY STOP SLAUGHTER"
+      [[languages.cs.menu.main]]
+        identifier = "home"
+        name = "NAŠE POŽADAVKY"
+        url = "/cs/#demands"
+        weight = 10
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
