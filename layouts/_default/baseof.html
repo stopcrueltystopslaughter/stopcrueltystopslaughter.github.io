@@ -28,16 +28,8 @@
         {{ $logo := resources.Get "img/logo.jpg" }}
         <img src="{{ $logo.RelPermalink }}" alt="Site Logo" class="logo">
 
-        <div class="vertical-menu-container">
-            <div class="menu-container">
-    {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
-                <a  class="menu-item" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-                {{ end }}
-            </div>
-            <div class="menu-container">
-                {{ partial "language-switcher.html" . }}
-            </div>
+        <div class="menu-container">
+            {{ partial "language-switcher.html" . }}
         </div>
     </div>
     <div class="bluebox">
@@ -48,10 +40,10 @@
         {{ $titleCows := resources.Get "img/title-cows.jpg" }}
         <span class="subtitle-text" >{{ i18n "subtitle" }}</span>
         <div class="horizontal-container">
-        <div class="cta-button">
-        <a href="https://eci.ec.europa.eu/047/public/#/screen/home" target="_blank" class="cta-button-text">{{ i18n "cta" }}</a>
-        </div>
-        <a href="https://citizens-initiative.europa.eu/initiatives/details/2024/000008_en#" class="learn-more-text" target="_blank">
+            <a  href="https://eci.ec.europa.eu/047/public/#/screen/home" target="_blank" class="cta-button">
+        <span class="cta-button-text">{{ i18n "cta" }}</span>
+        </a>
+        <a href="https://citizens-initiative.europa.eu/initiatives/details/2024/000008_en#" class="small-white-link" target="_blank">
             {{ i18n "learn_more" }}
         </a>
         </div>
@@ -59,8 +51,40 @@
         <img src="{{ $titleCows.RelPermalink }}" alt="Sad cows looking through gate" class="title-cows">
     </header>
     </div>
+    <div class="horizontal-container" id="demands" style="background: linear-gradient(to bottom, white, #f1f5fa); width: 1600px">
+        <div class="vertical-container">
+            <span class="big-blue-letters">
+                {{ i18n "we-call-for" }} 
+            </span>
+        </div>
+        <div>
+            <p class="bullet-point">
+                {{ i18n "incentives-point" }}
+            </p>
+            <p class="bullet-point-explanation">
+                {{ i18n "incentives-explanation" }}
+            </p> 
+            <span class="bullet-point">
+                {{ i18n "reduction-point" }}
+            </span>
+            <p class="bullet-point-explanation">
+                {{ i18n "reduction-explanation" }}
+            </p>
+            <a href="https://citizens-initiative.europa.eu/initiatives/details/2024/000008_en#" target="_blank" class="detail-button">
+                <span class="detail-button-text">
+                   {{ i18n "demands-in-detail" }} ›
+                </span>
+            </a>
+
+        </div>
+    </div>
     <main>
         {{ block "main" . }}{{ end }}
     </main>
+    <div class="bluebox" style="height:200px">
+        <span class="small-white-text">
+            {{ i18n "organization-details" }} <a href="https://www.savethechickens.it/" target="_blank" class="small-white-link" >{{ i18n "here" }}</a>.
+        </span>
+    </div>
 </body>
 </html>

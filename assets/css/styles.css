@@ -17,6 +17,29 @@
     border-radius: 0px;
 }
 
+.small-white-text {
+    line-height: 1.5;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(217, 229, 241, 1);
+    text-transform: unset;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: break-spaces;
+    font-size: 16px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(217, 229, 241, 1);
+    text-decoration: none;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#d9e5f1","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+}
+
+
 .title-text {
     line-height: 1.2;
     text-align: center;
@@ -70,6 +93,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .cta-button-text {
@@ -127,7 +151,7 @@
     justify-content: flex-end; /* Aligns items to the right */
 }
 
-.learn-more-text {
+.small-white-link {
     line-height: 1.4;
     box-sizing: border-box;
     -webkit-background-clip: text !important;
@@ -144,6 +168,106 @@
     font-style: normal;
     font-weight: 400;
 }
+
+.big-blue-letters {
+    line-height: 0.8;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(0, 80, 157, 1);
+    text-transform: uppercase;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: break-spaces;
+    font-size: 150px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(0, 80, 157, 1);
+    text-decoration: none;
+    --font-id: gfont-sigmar;
+    --fills: [["^ ","~:fill-color","#00509d","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Sigmar";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.bullet-point {
+    line-height: 1.3;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    line-break: auto;
+    overflow-wrap: initial;
+    font-size: 22px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
+    letter-spacing: -1px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 800;
+    text-indent: 0;
+}
+
+.bullet-point-explanation {
+    line-height: 1.5;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(0, 0, 0, 1);
+    text-transform: unset;
+    line-break: auto;
+    overflow-wrap: initial;
+    font-size: 16px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    text-indent: 0;
+}
+
+.detail-button {
+    box-sizing: border-box;
+    width: 416px;
+    height: 60px;
+    background: #D9E5F1;
+    border: 2px solid #00509D;
+    border-radius: 50px;
+    text-decoration: none;
+    display: block;
+}
+
+.detail-button-text {
+    line-height: 1.2;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: break-spaces;
+    font-size: 18px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 500;
+}
+
 
 .menu-item {
     display: inline-flex;
