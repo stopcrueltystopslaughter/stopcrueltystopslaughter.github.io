@@ -9,6 +9,115 @@
     width: 100%;
 }
 
+.bluebox {
+    box-sizing: border-box;
+    width: 1600px;
+    height: 641px;
+    background: #00509D;
+    border-radius: 0px;
+}
+
+.title-text {
+    line-height: 1.2;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: break-spaces;
+    font-size: 55px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    --font-id: gfont-sigmar;
+    --fills: [["^ ","~:fill-color","#ffffff","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Sigmar";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.subtitle-text {
+    line-height: 1.2;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(255, 255, 255, 1);
+    text-transform: unset;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: break-spaces;
+    font-size: 30px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#ffffff","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cta-button {
+    box-sizing: border-box;
+    width: 277px;
+    height: 60px;
+    background: #FCA311;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-button-text {
+    line-height: 1.2;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: break-spaces;
+    font-size: 26px;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.title-cows {
+    height: 600px;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertically centers items in the row */
+    justify-content: space-between; /* Adds space between the text content and image */
+    gap: 20px; /* Adds spacing between the elements */
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers items vertically */
+    align-items:center;
+    gap: 15px; /* Adds spacing between the title, subtitle, and button */
+}
+
+
 .vertical-menu-container {
     display: flex;
     flex-direction: column;
@@ -18,6 +127,23 @@
     justify-content: flex-end; /* Aligns items to the right */
 }
 
+.learn-more-text {
+    line-height: 1.4;
+    box-sizing: border-box;
+    -webkit-background-clip: text !important;
+    color: rgba(255, 255, 255, 1);
+    text-transform: unset;
+    overflow-wrap: initial;
+    font-size: 18px;
+    caret-color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+    --font-id: gfont-open-sans;
+    --fills: [["^ ","~:fill-color","#ffffff","~:fill-opacity",1]];
+    letter-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+}
 
 .menu-item {
     display: inline-flex;

@@ -1,5 +1,5 @@
-baseURL = "https://stopcrueltystopslaughter.github.io/"
-defaultContentLanguage = "cs"
+baseURL = "https://stopcss.eu/"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
 [languages]
