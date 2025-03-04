@@ -237,13 +237,14 @@
 
 .detail-button {
     box-sizing: border-box;
-    width: 416px;
+    width: 316px;
     height: 60px;
     background: #D9E5F1;
     border: 2px solid #00509D;
     border-radius: 50px;
     text-decoration: none;
     display: block;
+    align-content: center;
 }
 
 .detail-button-text {
@@ -255,7 +256,6 @@
     text-transform: uppercase;
     line-break: auto;
     overflow-wrap: initial;
-    white-space: break-spaces;
     font-size: 18px;
     text-rendering: geometricPrecision;
     caret-color: rgba(0, 0, 0, 1);
@@ -266,6 +266,7 @@
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 500;
+    margin: 30px;
 }
 
 
