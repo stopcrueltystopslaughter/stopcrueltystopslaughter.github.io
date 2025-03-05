@@ -1,3 +1,64 @@
+body {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.big-blue-letters, .bullet-point, .bullet-point-explanation, .detail-button-text, .menu-item {
+  box-sizing: border-box;
+  -webkit-background-clip: text !important;
+  text-rendering: geometricPrecision;
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-style: normal;
+}
+
+/* Open Sans font group */
+.small-white-text, .subtitle-text, .cta-button-text, .small-white-link,
+.bullet-point, .bullet-point-explanation, .detail-button-text, .menu-item {
+  font-family: "Open Sans";
+  --font-id: gfont-open-sans;
+}
+
+/* Sigmar font group */
+.title-text, .big-blue-letters {
+  font-family: "Sigmar";
+  --font-id: gfont-sigmar;
+}
+
+/* White text group */
+.small-white-text, .title-text, .subtitle-text, .small-white-link {
+  color: rgba(255, 255, 255, 1);
+  caret-color: rgba(255, 255, 255, 1);
+}
+
+/* Black text group */
+.cta-button-text, .bullet-point, .bullet-point-explanation, .detail-button-text, .menu-item {
+  color: rgba(0, 0, 0, 1);
+  caret-color: rgba(0, 0, 0, 1);
+}
+
+/* Uppercase text */
+.title-text, .cta-button-text, .big-blue-letters, .bullet-point, .detail-button-text, .menu-item {
+  text-transform: uppercase;
+}
+
+/* Normal text */
+.small-white-text, .subtitle-text, .small-white-link, .bullet-point-explanation {
+  text-transform: unset;
+}
+
+/* Text wrapping properties */
+.small-white-text, .title-text, .subtitle-text, .big-blue-letters, .bullet-point, .bullet-point-explanation {
+  line-break: auto;
+  overflow-wrap: initial;
+}
+
 .logo {
     height: 60px;
 }
@@ -20,67 +81,26 @@
 .small-white-text {
     line-height: 1.5;
     text-align: left;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(217, 229, 241, 1);
-    text-transform: unset;
-    line-break: auto;
-    overflow-wrap: initial;
-    white-space: break-spaces;
-    font-size: 16px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(217, 229, 241, 1);
-    text-decoration: none;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#d9e5f1","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Open Sans";
-    font-style: normal;
+    color: rgba(217, 229, 241, 1);
+    caret-color: rgba(217, 229, 241, 1);
+    font-size: 16px;
     font-weight: 400;
 }
-
 
 .title-text {
     line-height: 1.2;
     text-align: center;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(255, 255, 255, 1);
-    text-transform: uppercase;
-    line-break: auto;
-    overflow-wrap: initial;
-    white-space: break-spaces;
-    font-size: 55px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-    --font-id: gfont-sigmar;
     --fills: [["^ ","~:fill-color","#ffffff","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Sigmar";
-    font-style: normal;
+    font-size: 55px;
     font-weight: 400;
 }
 
 .subtitle-text {
     line-height: 1.2;
     text-align: left;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(255, 255, 255, 1);
-    text-transform: unset;
-    line-break: auto;
-    overflow-wrap: initial;
-    white-space: break-spaces;
-    font-size: 30px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#ffffff","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Open Sans";
-    font-style: normal;
+    font-size: 30px;
     font-weight: 400;
 }
 
@@ -99,22 +119,8 @@
 .cta-button-text {
     line-height: 1.2;
     text-align: center;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(0, 0, 0, 1);
-    text-transform: uppercase;
-    line-break: auto;
-    overflow-wrap: initial;
-    white-space: break-spaces;
-    font-size: 26px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(0, 0, 0, 1);
-    text-decoration: none;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Open Sans";
-    font-style: normal;
+    font-size: 26px;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -128,87 +134,52 @@
 .horizontal-container {
     display: flex;
     flex-direction: row;
-    align-items: center; /* Vertically centers items in the row */
-    justify-content: space-between; /* Adds space between the text content and image */
-    gap: 20px; /* Adds spacing between the elements */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .vertical-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers items vertically */
-    align-items:center;
-    gap: 15px; /* Adds spacing between the title, subtitle, and button */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
-
 
 .vertical-menu-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 10px; /* Space between the two menus */
-    margin-left: auto; /* Pushes the vertical container to the right */
-    justify-content: flex-end; /* Aligns items to the right */
+    justify-content: flex-end;
+    gap: 10px;
+    margin-left: auto;
 }
 
 .small-white-link {
     line-height: 1.4;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(255, 255, 255, 1);
-    text-transform: unset;
-    overflow-wrap: initial;
-    font-size: 18px;
-    caret-color: rgba(255, 255, 255, 1);
-    text-decoration: underline;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#ffffff","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Open Sans";
-    font-style: normal;
+    font-size: 18px;
     font-weight: 400;
+    text-decoration: underline;
+    overflow-wrap: initial;
 }
 
 .big-blue-letters {
     line-height: 0.8;
     text-align: left;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(0, 80, 157, 1);
-    text-transform: uppercase;
-    line-break: auto;
-    overflow-wrap: initial;
-    white-space: break-spaces;
-    font-size: 150px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(0, 80, 157, 1);
-    text-decoration: none;
-    --font-id: gfont-sigmar;
     --fills: [["^ ","~:fill-color","#00509d","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Sigmar";
-    font-style: normal;
+    color: rgba(0, 80, 157, 1);
+    caret-color: rgba(0, 80, 157, 1);
+    font-size: 150px;
     font-weight: 400;
 }
 
 .bullet-point {
     line-height: 1.3;
     text-align: left;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(0, 0, 0, 1);
-    text-transform: uppercase;
-    line-break: auto;
-    overflow-wrap: initial;
-    font-size: 22px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(0, 0, 0, 1);
-    text-decoration: none;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
+    font-size: 22px;
     letter-spacing: -1px;
-    font-family: "Open Sans";
-    font-style: normal;
     font-weight: 800;
     text-indent: 0;
 }
@@ -216,21 +187,8 @@
 .bullet-point-explanation {
     line-height: 1.5;
     text-align: left;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(0, 0, 0, 1);
-    text-transform: unset;
-    line-break: auto;
-    overflow-wrap: initial;
-    font-size: 16px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(0, 0, 0, 1);
-    text-decoration: none;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Open Sans";
-    font-style: normal;
+    font-size: 16px;
     font-weight: 400;
     text-indent: 0;
 }
@@ -250,47 +208,22 @@
 .detail-button-text {
     line-height: 1.2;
     text-align: left;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(0, 0, 0, 1);
-    text-transform: uppercase;
-    line-break: auto;
-    overflow-wrap: initial;
-    font-size: 18px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(0, 0, 0, 1);
-    text-decoration: none;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Open Sans";
-    font-style: normal;
+    font-size: 18px;
     font-weight: 500;
     margin: 30px;
 }
-
 
 .menu-item {
     display: inline-flex;
     align-items: center;
     justify-content: flex-end;
     float: right;
-    margin-left: 20px; /* Space between menu items */
+    margin-left: 20px;
     line-height: 1.2;
-    box-sizing: border-box;
-    -webkit-background-clip: text !important;
-    color: rgba(0, 0, 0, 1);
-    text-transform: uppercase;
-    overflow-wrap: initial;
-    white-space: pre;
-    font-size: 20px;
-    text-rendering: geometricPrecision;
-    caret-color: rgba(0, 0, 0, 1);
-    text-decoration: none;
-    --font-id: gfont-open-sans;
     --fills: [["^ ","~:fill-color","#000000","~:fill-opacity",1]];
-    letter-spacing: 0px;
-    font-family: "Open Sans";
-    font-style: normal;
+    font-size: 20px;
     font-weight: 600;
+    white-space: pre;
+    overflow-wrap: initial;
 }
