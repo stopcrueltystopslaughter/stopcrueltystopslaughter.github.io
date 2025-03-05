@@ -16,7 +16,7 @@
     <link rel="icon" href="{{ $favicon.RelPermalink }}" type="image/png">
 </head>
 <body>
-    <div class="menu-container">
+    <div class="section menu-container">
         {{ $logo := resources.Get "img/logo.jpg" }}
         <img src="{{ $logo.RelPermalink }}" alt="Site Logo" class="logo">
 
@@ -43,7 +43,7 @@
         <img src="{{ $titleCows.RelPermalink }}" alt="Sad cows looking through gate" class="title-cows">
     </header>
     </div>
-    <div class="horizontal-container" id="demands" style="background: linear-gradient(to bottom, white, #f1f5fa); width: 1600px">
+    <div class="horizontal-container lighter-gradient-section" id="demands">
         <div class="vertical-container">
             <span class="big-blue-letters">
                 {{ i18n "we-call-for" }} 
@@ -74,9 +74,17 @@
         {{ block "main" . }}{{ end }}
     </main>
     <div class="bluebox" style="height:200px">
-        <span class="small-white-text">
-            {{ i18n "organization-details" }} <a href="https://www.savethechickens.it/" target="_blank" class="small-white-link" >{{ i18n "here" }}</a>.
-        </span>
+        <div class="horizontal-container">
+            <div class="vertical-container" style="margin: 40px">
+            <span class="small-white-text">
+                {{ i18n "organization-details" }}&nbsp<a href="https://www.savethechickens.it/" target="_blank" class="small-white-link" >{{ i18n "here" }}</a>.
+            </span>
+            <div class="horizontal-container">
+                <a  href="https://eci.ec.europa.eu/047/public/#/screen/home" target="_blank" class="cta-button">
+                    <span class="cta-button-text">{{ i18n "cta" }}</span>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

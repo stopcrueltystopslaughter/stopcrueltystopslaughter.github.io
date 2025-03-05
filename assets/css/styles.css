@@ -61,22 +61,34 @@ body {
 
 .logo {
     height: 60px;
+    margin: 10px;
 }
 
 /* For the parent container */
 .menu-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
 .bluebox {
     box-sizing: border-box;
     width: 1600px;
-    height: 641px;
+    height: auto;
     background: #00509D;
     border-radius: 0px;
 }
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .bluebox {
+        width: 100%;
+        min-height: 400px; /* Optional: reduce minimum height on mobile */
+        height: auto; /* Allow height to adjust based on content */
+    }
+}
+
 
 .small-white-text {
     line-height: 1.5;
@@ -106,7 +118,7 @@ body {
 
 .cta-button {
     box-sizing: border-box;
-    width: 277px;
+    width: 277px !important;
     height: 60px;
     background: #FCA311;
     border-radius: 50px;
@@ -128,7 +140,13 @@ body {
 }
 
 .title-cows {
-    height: 600px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+        .title-cows {
+            height: 600px;
+    }
 }
 
 .horizontal-container {
@@ -138,6 +156,43 @@ body {
     justify-content: space-between;
     gap: 20px;
 }
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section, .lighter-gradient-section {
+    width: 1600px
+}
+
+.lighter-gradient-section {
+    background: linear-gradient(to bottom, white, #f1f5fa);
+}
+
+/* Media query for smaller screens (phones in portrait mode) */
+@media screen and (max-width: 768px) {
+
+    .section, .lighter-gradient-section {
+        max-width: 100%;
+    }
+    .detail-button {
+        margin: 20px;
+    }
+
+    .horizontal-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontal-container > * {
+        max-width: 90%;
+    }
+}
+
 
 .vertical-container {
     display: flex;
@@ -191,6 +246,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     text-indent: 0;
+    margin-right: 20px;
 }
 
 .detail-button {
