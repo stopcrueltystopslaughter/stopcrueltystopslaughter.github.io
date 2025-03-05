@@ -36,6 +36,13 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      # Add this step to preserve CNAME if it exists
+      - name: Copy CNAME if it exists
+        run: |
+          if [ -f "CNAME" ]; then
+            cp CNAME public/
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -51,4 +58,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
