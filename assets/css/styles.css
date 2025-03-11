@@ -74,19 +74,10 @@ body {
 
 .bluebox {
     box-sizing: border-box;
-    width: 1600px;
+    width: 1500px;
     height: auto;
     background: #00509D;
     border-radius: 0px;
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .bluebox {
-        width: 100%;
-        min-height: 400px; /* Optional: reduce minimum height on mobile */
-        height: auto; /* Allow height to adjust based on content */
-    }
 }
 
 
@@ -143,11 +134,6 @@ body {
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {
-        .title-cows {
-            height: 600px;
-    }
-}
 
 .horizontal-container {
     display: flex;
@@ -166,15 +152,81 @@ body {
 }
 
 .section, .lighter-gradient-section {
-    width: 1600px
+    width: 1500px;
 }
 
 .lighter-gradient-section {
     background: linear-gradient(to bottom, white, #f1f5fa);
+    padding-bottom: 20px;
+}
+
+.holding-chicken {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.chicken-overlay {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.chicken-overlay::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00509d;
+        opacity: 0.79;
+        pointer-events: none; /* allows clicks to pass through to the image */
+}
+
+.chicken-overlay-text-head {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensures text appears above the overlay */
+    width: 80%; /* Adjust as needed */
+    dominant-baseline: ideographic;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: Sigmar;
+    letter-spacing: normal;
+    font-style: normal;
+    font-weight: 400;
+    white-space: pre;
+    font-size: 55px;
+    text-decoration: none solid rgb(217, 229, 241);
+    direction: ltr;
+    color: #d9e5f1;
+    fill-opacity: 1;
+}
+
+.chicken-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1; /* Ensures text appears above the overlay */
+    width: 80%; /* Adjust as needed */
 }
 
 /* Media query for smaller screens (phones in portrait mode) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1500px) {
+    .bluebox {
+        width: 100%;
+        min-height: 400px; /* Optional: reduce minimum height on mobile */
+        height: auto; /* Allow height to adjust based on content */
+    }
 
     .section, .lighter-gradient-section {
         max-width: 100%;
@@ -192,6 +244,13 @@ body {
         max-width: 90%;
     }
 }
+
+@media screen and (min-width: 1500px) {
+    .title-cows {
+        height: 600px;
+    }
+}
+
 
 
 .vertical-container {
@@ -227,6 +286,7 @@ body {
     caret-color: rgba(0, 80, 157, 1);
     font-size: 150px;
     font-weight: 400;
+    margin: 20px;
 }
 
 .bullet-point {
