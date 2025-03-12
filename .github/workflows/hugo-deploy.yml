@@ -32,6 +32,7 @@ jobs:
         with:
           hugo-version: '0.126.1'
           extended: true
+          cname: stopcss.eu
 
       - name: Build
         run: hugo --minify
