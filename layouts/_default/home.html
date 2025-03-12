@@ -1,6 +1,56 @@
 {{ define "main" }}
-    <div class="content">
-        {{ .Content }}
+    <div class="bluebox">
+    <header>
+        <div class="horizontal-container">
+        <div class="vertical-container">
+        <h1 class="title-text">{{ .Site.Title }}</h1>
+        <span class="subtitle-text" >{{ i18n "subtitle" }}</span>
+        <div class="horizontal-container">
+            <a  href="https://eci.ec.europa.eu/047/public/#/screen/home" target="_blank" class="cta-button">
+        <span class="cta-button-text">{{ i18n "cta" }}</span>
+        </a>
+        <a href="https://citizens-initiative.europa.eu/initiatives/details/2024/000008_en#" class="small-white-link" target="_blank">
+            {{ i18n "learn_more" }}
+        </a>
+        </div>
+        </div>
+        {{ $titleCows := resources.Get "img/title-cows.jpg" }}
+        <img src="{{ $titleCows.RelPermalink }}" alt="Sad cows looking through gate" class="title-cows">
+    </header>
+    </div>
+    <div class="lighter-gradient-section vertical-container">
+        <div class="horizontal-container" id="demands">
+            <div class="vertical-container">
+                <span class="big-blue-letters">
+                    {{ i18n "we-call-for" }} 
+                </span>
+            </div>
+            <div>
+                <p class="bullet-point">
+                    {{ i18n "incentives-point" }}
+                </p>
+                <p class="bullet-point-explanation">
+                    {{ i18n "incentives-explanation" }}
+                </p> 
+                <span class="bullet-point">
+                    {{ i18n "reduction-point" }}
+                </span>
+                <p class="bullet-point-explanation">
+                    {{ i18n "reduction-explanation" }}
+                </p>
+                <a href="https://citizens-initiative.europa.eu/initiatives/details/2024/000008_en#" target="_blank" class="detail-button">
+                    <span class="detail-button-text">
+                        {{ i18n "demands-in-detail" }} ›
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="chicken-overlay">
+            {{ $holdingChicken := resources.Get "img/holding-chicken.jpg" }}
+            <img src="{{ $holdingChicken.RelPermalink }}" alt="Woman holding a chicken" class="holding-chicken">
+            <div class="chicken-overlay-text-head">DONATE</div>
+            <div class="chicken-overlay-text">IBAN: IT74K0503401708000000004326 <br/> SWIFT/BIC: BAPPIT21127</div>
+        </div>
     </div>
     <div class="posts">
         {{ range where .Site.RegularPages "Type" "posts" }}
