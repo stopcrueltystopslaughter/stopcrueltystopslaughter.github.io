@@ -60,6 +60,10 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+          # Fix mixed content by ensuring all URLs use HTTPS
+          find public -type f -name "*.html" -exec sed -i 's|http://|https://|g' {} \;
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
