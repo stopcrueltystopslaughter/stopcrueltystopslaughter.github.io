@@ -1,0 +1,11 @@
+partners:
+  - image: peta.jpeg
+    url: https://peta.org
+  - image: pacma.png
+    url: https://pacma.es
+  - image: eumans.jpg
+    url: https://eumans.eu
+  - image: food-for-profit.jpg
+    url: https://foodforprofit.com
+  - image: cibio.png
+    url: https://www.cibio.unitn.it/

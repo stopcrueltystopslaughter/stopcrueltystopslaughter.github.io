@@ -15,13 +15,10 @@
 </style>
 
 <div class="image-grid">
-    {{- range (split .images ",") -}}
-    {{- $parts := split . ";" -}}
-    {{- $imageName := trim (index $parts 0) " " -}}
-    {{- $url := "" -}}
-    {{- if gt (len $parts) 1 -}}
-    {{- $url = trim (index $parts 1) " " -}}
-    {{- end -}}
+    {{- $dataSource := .dataSource | default "partners" -}}
+    {{- range index site.Data $dataSource "partners" -}}
+    {{- $imageName := .image -}}
+    {{- $url := .url -}}
     {{- $imagePath := print "img/" $imageName -}}
     {{- $image := resources.Get $imagePath -}}
     {{- if $url -}}

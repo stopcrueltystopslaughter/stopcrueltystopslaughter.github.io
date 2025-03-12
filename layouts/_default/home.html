@@ -65,7 +65,8 @@
             <div class="chicken-overlay-text">IBAN: IT74K0503401708000000004326 <br/> SWIFT/BIC: BAPPIT21127</div>
         </div>
         <div class="mid-title">{{i18n "partners" }}</div>
-        {{ partial "image-grid.html" (dict "images" "peta.jpeg;https://peta.org,pacma.png;https://pacma.es,eumans.jpg;https://eumans.eu,food-for-profit.jpg;https://foodforprofit.com,cibio.png;https://www.cibio.unitn.it/") }}
+        {{ partial "image-grid.html" (dict "dataSource" "partners") }}
+
 
     </div>
 {{ end }}
