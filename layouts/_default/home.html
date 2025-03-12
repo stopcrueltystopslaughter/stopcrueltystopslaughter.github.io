@@ -45,18 +45,27 @@
                 </a>
             </div>
         </div>
+        <div class="mid-title" style="margin-top:90px">{{i18n "why"}}</div>
+
+        <div class="cards-wrapper">
+            {{ range where .Site.RegularPages "Type" "why" }}
+            <div class="card">
+                <h3 class="card-title">{{ .Title }}</h3>
+                <div class="card-content">
+                    {{ .Content }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
         <div class="chicken-overlay">
             {{ $holdingChicken := resources.Get "img/holding-chicken.jpg" }}
             <img src="{{ $holdingChicken.RelPermalink }}" alt="Woman holding a chicken" class="holding-chicken">
-            <div class="chicken-overlay-text-head">DONATE</div>
+            <div class="chicken-overlay-text-head">{{i18n "donate"}}</div>
             <div class="chicken-overlay-text">IBAN: IT74K0503401708000000004326 <br/> SWIFT/BIC: BAPPIT21127</div>
         </div>
-    </div>
-    <div class="posts">
-        {{ range where .Site.RegularPages "Type" "posts" }}
-            <div class="post">
-                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            </div>
-        {{ end }}
+        <div class="mid-title">{{i18n "partners" }}</div>
+        {{ partial "image-grid.html" (dict "images" "peta.jpeg;https://peta.org,pacma.png;https://pacma.es,eumans.jpg;https://eumans.eu,food-for-profit.jpg;https://foodforprofit.com,cibio.png;https://www.cibio.unitn.it/") }}
+
     </div>
 {{ end }}

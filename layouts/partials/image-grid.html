@@ -1,0 +1,35 @@
+{{/* layouts/partials/image-grid.html */}}
+<style>
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.image-grid img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+</style>
+
+<div class="image-grid">
+    {{- range (split .images ",") -}}
+    {{- $parts := split . ";" -}}
+    {{- $imageName := trim (index $parts 0) " " -}}
+    {{- $url := "" -}}
+    {{- if gt (len $parts) 1 -}}
+    {{- $url = trim (index $parts 1) " " -}}
+    {{- end -}}
+    {{- $imagePath := print "img/" $imageName -}}
+    {{- $image := resources.Get $imagePath -}}
+    {{- if $url -}}
+    <a href="{{ $url }}" target="_blank" rel="noopener">
+        <img src="{{ $image.RelPermalink }}" alt="Image: {{ $imageName }}">
+    </a>
+    {{- else -}}
+    <img src="{{ $image.RelPermalink }}" alt="Image: {{ $imageName }}">
+    {{- end -}}
+    {{- end -}}
+</div>
