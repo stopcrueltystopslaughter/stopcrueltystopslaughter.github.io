@@ -450,3 +450,64 @@ body {
         flex: 0 1 100%; /* One card per row on small screens */
     }
 }
+
+.pdf-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pdf-card {
+    width: 220px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pdf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.pdf-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.thumbnail {
+    margin-bottom: 15px;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+.card-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.subtitle {
+    color: #666;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.download-hint {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+}

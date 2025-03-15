@@ -58,6 +58,39 @@
             {{ end }}
         </div>
 
+        <div class="mid-title" style="margin-top:90px">{{i18n "get-involved"}}</div>
+        <p>
+            {{i18n "printable-fliers"}}
+        </p>
+        {{ $pdfs := slice 
+        (dict "file" "Stop Cruelty Stop Slaughter-en.pdf" "label" "Stop Cruelty Stop Slaughter" "subtitle" "English - Color")
+        (dict "file" "Stop Cruelty Stop Slaughter-cs.pdf" "label" "Stop Cruelty Stop Slaughter" "subtitle" "Czech - Color")
+        (dict "file" "Stop Cruelty Stop Slaughter-en-bw.pdf" "label" "Stop Cruelty Stop Slaughter" "subtitle" "English - Black & White")
+        (dict "file" "Stop Cruelty Stop Slaughter-cs-bw.pdf" "label" "Stop Cruelty Stop Slaughter" "subtitle" "Czech - Black & White")
+        }}
+
+        <div class="pdf-cards">
+            {{ range $pdfs }}
+            {{ $pdf := resources.Get (printf "pdf/%s" .file) }}
+            {{ $thumbnail := resources.Get (printf "pdf/%s.png" (replace .file ".pdf" "")) }}
+
+            <div class="pdf-card">
+                <a href="{{ $pdf.RelPermalink }}" download>
+                    <div class="card-content">
+                        <div class="thumbnail">
+                            <img src="{{ $thumbnail.RelPermalink }}" alt="Preview of {{ .label }}">
+                        </div>
+                        <div class="card-text">
+                            <h3>{{ .label }}</h3>
+                            <p class="subtitle">{{ .subtitle }}</p>
+                            <span class="download-hint">Click to download</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+
         <div class="chicken-overlay">
             {{ $holdingChicken := resources.Get "img/holding-chicken.jpg" }}
             <img src="{{ $holdingChicken.RelPermalink }}" alt="Woman holding a chicken" class="holding-chicken">
