@@ -39,4 +39,9 @@ other = "NAŠE PARTNERY"
 other = "darovat"
 [why]
 other="PROČ?"
-
+[get-involved]
+other="Zapojte se!"
+[printable-fliers]
+other="Stáhněte si letáky k tisku"
+[download]
+other="Klikněte pro stažení"

@@ -29,6 +29,7 @@ body {
 .title-text, .big-blue-letters {
   font-family: "Sigmar";
   --font-id: gfont-sigmar;
+  width: 100%;
 }
 
 /* White text group */
@@ -281,6 +282,9 @@ body {
     }
 }
 
+.demands-title {
+    width: 100%;
+}
 
 
 .vertical-container {
